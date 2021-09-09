@@ -1,5 +1,6 @@
 const http = require("https");
 
+// This API provides information about Coronavirus disease, from several reliable sources, like Johns Hopkins CSSE, CDC, WHO and others.
 const options = {
 	"method": "GET",
 	"hostname": "covid-19-data.p.rapidapi.com",
