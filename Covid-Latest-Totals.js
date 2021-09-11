@@ -1,7 +1,7 @@
 const https = require("https");
 
 // Endpoint for getting latest totals
-const endpointUrl = "https://covid-19-data.p.rapidapi.com/report/totals";
+const endpointUrl = "https://covid-19-data.p.rapidapi.com/totals";
 
 // RapidAPI host
 const rapidApiHost = "covid-19-data.p.rapidapi.com";
