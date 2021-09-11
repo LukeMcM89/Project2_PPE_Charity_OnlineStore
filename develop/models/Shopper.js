@@ -1,10 +1,10 @@
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
 class Shopper extends Model {
     checkPassword(loginPw) {
-//COME BACK TO THIS 
+        //COME BACK TO THIS 
     }
 }
 
@@ -25,16 +25,16 @@ Shopper.init(
             allowNull: false,
             validate: {
                 len: [15],
-            }
+            },
         },
     },
-{
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscorec: true,
-    modelName: 'shopper',
-}
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscorec: true,
+        modelName: 'shopper',
+    }
 );
 
 module.exports = Shopper;
