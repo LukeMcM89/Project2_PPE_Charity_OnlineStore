@@ -2,3 +2,15 @@ DROP DATABASE IF EXISTS ppestore_db;
 
 CREATE DATABASE ppestore_db;
 
+CREATE TABLE shopper (
+    shopper_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    shoppername VARCHAR(25) NOT NULL,
+    shopper_password VARCHAR(15) NOT NULL,
+    date_created DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE TABLE inventory (
+    inventory_id INT NOT NULL AUTO_INCREMEBNT PRIMARY KEY,
+    inventory_available SMALLINT(6) NOT NULL DEFAULT 0
+    CONSTRAINT product_id FOREIGN KEY
+)
