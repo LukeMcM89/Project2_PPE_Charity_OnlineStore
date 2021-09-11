@@ -13,6 +13,7 @@ CREATE TABLE products (
     products_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     products_name VARCHAR(25) NOT NULL,
     products_description TEXT(40),
+    date_created DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
    --COME BACK TO PROD IMAGES
     CONSTRAINT products_id FOREIGN KEY 
 );

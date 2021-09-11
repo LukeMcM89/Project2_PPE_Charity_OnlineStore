@@ -18,6 +18,7 @@
   "homepage": "https://github.com/apalmer37/Project2_PPE_Charity_OnlineStore#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "sequelize": "^6.6.5"
   }
 }
