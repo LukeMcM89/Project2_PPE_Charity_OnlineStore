@@ -1,4 +1,4 @@
-const { DataTypes, INTEGER } = require('sequelize/types');
+const { DataTypes, INTEGER } = require('sequelize/');
 const { Shopper } = require('../models');
 
 const shopperData = [

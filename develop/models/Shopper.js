@@ -6,7 +6,7 @@ class Shopper extends Model {
     checkPassword(loginPw) {
         //COME BACK TO THIS 
     }
-}
+};
 
 Shopper.init(
     {
