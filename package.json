@@ -1,0 +1,23 @@
+{
+  "name": "project2_ppe_charity_onlinestore",
+  "version": "1.0.0",
+  "description": "## Development Team",
+  "main": "api_db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apalmer37/Project2_PPE_Charity_OnlineStore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apalmer37/Project2_PPE_Charity_OnlineStore/issues"
+  },
+  "homepage": "https://github.com/apalmer37/Project2_PPE_Charity_OnlineStore#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "https": "^1.0.0"
+  }
+}
