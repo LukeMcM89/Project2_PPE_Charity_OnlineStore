@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Inventory extends Products { }
+class Inventory extends Model { }
 
 
 Inventory.init(
@@ -34,7 +34,7 @@ Inventory.init(
         freezeTableName: true,
         underscorec: true,
         modelName: 'inventory',
-    },
+    }
 );
 
 module.exports = Inventory;
