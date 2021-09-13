@@ -13,16 +13,12 @@ Products.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        product_name: {
+        products_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        product_description: {
+        products_description: {
             type: DataTypes.STRING,
-            allowNull: false,
-        },
-        date_created: {
-            types: DataTypes.DATEONLY,
             allowNull: false,
         },
     },

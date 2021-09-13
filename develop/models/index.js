@@ -1,9 +1,12 @@
-const router = require('express').Router();
+const Shopper = require('./Shopper');
+const Products = require('./Products');
 
-const apiRoutes = require('./api');
-const homeRoutes = require('./home-routes.js');
+Shopper.hasMany(Products, {
+  foreignKey: 'product_name',
+});
 
-router.use('/', homeRoutes);
-router.use('/api', apiRoutes);
+Products.belongsTo(Shopper, {
+  foreignKey: 'shopper_id',
+});
 
-module.exports = router;
+module.exports = { Shopper, Products };
