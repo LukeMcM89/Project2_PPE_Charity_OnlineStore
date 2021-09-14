@@ -1,16 +1,18 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { Shopper } = require('../../models');
 
 // CREATE new user
+
 router.post('/', async (req, res) => {
   try {
-    const dbUserData = await User.create({
+    const dbUserData = await Shopper.create({
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
     });
 
     // Set up sessions with a 'loggedIn' variable set to `true`
+
     req.session.save(() => {
       req.session.loggedIn = true;
 
@@ -23,9 +25,10 @@ router.post('/', async (req, res) => {
 });
 
 // Login
+
 router.post('/login', async (req, res) => {
   try {
-    const dbUserData = await User.findOne({
+    const dbUserData = await Shopper.findOne({
       where: {
         email: req.body.email,
       },
@@ -48,6 +51,7 @@ router.post('/login', async (req, res) => {
     }
 
     // Once the user successfully logs in, set up the sessions variable 'loggedIn'
+
     req.session.save(() => {
       req.session.loggedIn = true;
 
@@ -62,6 +66,7 @@ router.post('/login', async (req, res) => {
 });
 
 // Logout
+
 router.post('/logout', (req, res) => {
   // When the user logs out, destroy the session
   if (req.session.loggedIn) {

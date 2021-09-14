@@ -18,6 +18,7 @@
   "homepage": "https://github.com/apalmer37/Project2_PPE_Charity_OnlineStore#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "bootstrap": "^5.1.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
