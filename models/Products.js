@@ -1,9 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Products extends Model { }
-
-//IF problems investigate line20+25
+class Products extends Model {}
 
 Products.init(
     {
@@ -13,14 +11,18 @@ Products.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        products_name: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        products_description: {
+        description: {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        filename: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          },
     },
 
     {
