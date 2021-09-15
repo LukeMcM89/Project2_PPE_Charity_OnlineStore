@@ -1,5 +1,4 @@
-{{#each products as |product|}}
-{{/each}}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +13,10 @@
   </head>
 
 <body>
+{{#each products as |product|}}
+<li>{{product.title}}</li>
+<p>{{product.description}}</p>
+{{/each}}
 <div class="container">
     <h2>PPE Products</h2>
     <div class="row">
