@@ -1,22 +1,22 @@
 const router = require('express').Router();
-const { Gallery, Painting } = require('../models');
+const { Products, Shopper } = require('../models');
 
-// GET all galleries for homepage
-router.get('/', async (req, res) => {
+// GET all products for product page
+router.get('/products', async (req, res) => {
   try {
-    // const dbGalleryData = await Gallery.findAll({
-    //   include: [
-    //     {
-    //       model: Painting,
-    //       attributes: ['filename', 'description'],
-    //     },
-    //   ],
-    // });
+    const dbProductData = await Products.findAll({
+      include: [
+        {
+          model: Products,
+          attributes: ['filename', 'title', 'description'],
+        },
+      ],
+    });
 
-    // const galleries = dbGalleryData.map((gallery) =>
-    //   gallery.get({ plain: true })
-    // );
-    // Send over the 'loggedIn' session variable to the 'homepage' template
+    const galleries = dbProductData.map((gallery) =>
+      gallery.get({ plain: true })
+    );
+    //Send over the 'loggedIn' session variable to the 'homepage' template
     res.render('login', {
       // galleries,
       loggedIn: req.session.loggedIn,
@@ -28,17 +28,15 @@ router.get('/', async (req, res) => {
 });
 
 // GET products --
-router.get('/gallery/:id', async (req, res) => {
+router.get('/products/:id', async (req, res) => {
   try {
-    const dbGalleryData = await Gallery.findByPk(req.params.id, {
+    const dbProductsData = await Products.findByPk(req.params.id, {
       include: [
         {
-          model: Painting,
+          model: Products,
           attributes: [
             'id',
             'title',
-            'artist',
-            'exhibition_date',
             'filename',
             'description',
           ],
@@ -46,9 +44,9 @@ router.get('/gallery/:id', async (req, res) => {
       ],
     });
 
-    const gallery = dbGalleryData.get({ plain: true });
-    // Send over the 'loggedIn' session variable to the 'gallery' template
-    res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
+    const Product = dbProductsData.get({ plain: true });
+    // Send over the 'loggedIn' session variable to the 'product' template
+    res.render('product', { products, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -56,13 +54,13 @@ router.get('/gallery/:id', async (req, res) => {
 });
 
 // GET one painting
-router.get('/painting/:id', async (req, res) => {
+router.get('/products/:id', async (req, res) => {
   try {
-    const dbPaintingData = await Painting.findByPk(req.params.id);
+    const dbProductsData = await Painting.findByPk(req.params.id);
 
-    const painting = dbPaintingData.get({ plain: true });
+    const products = dbProductsData.get({ plain: true });
     // Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render('painting', { painting, loggedIn: req.session.loggedIn });
+    res.render('products', { products, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
