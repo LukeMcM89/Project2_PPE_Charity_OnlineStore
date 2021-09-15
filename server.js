@@ -21,7 +21,7 @@ const sess = {
 app.use(session(sess));
 
 const hbs = exphbs.create({ helpers });
-
+// Setting Handlebars.js as the defualt template engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
