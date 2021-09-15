@@ -1,0 +1,129 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/public/assets/styles.css">
+  </head>
+
+<body>
+{{#each products as |product|}}
+<li>{{product.title}}</li>
+<p>{{product.description}}</p>
+{{/each}}
+<div class="container">
+    <h2>PPE Products</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="product-top">
+                <img src="../public/assets/FaceMask.png">
+                <div class="overlay">
+                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
+                            class="bi bi-cart-check"></i></button>
+                </div>
+            </div>
+            <div class="product-bottom text-center">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star-half-o"></i>
+                <h3>Disposable Face Mask</h3>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="product-top">
+                <img src="../public/assets/FaceShield.png">
+                <div class="overlay">
+                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
+                            class="bi bi-cart-check"></i></button>
+                </div>
+            </div>
+
+            <div class="product-bottom text-center">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <h3>Face Shield</h3>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="product-top">
+                <img src="../public/assets/MedicalGloves.png">
+                <div class="overlay">
+                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
+                            class="bi bi-cart-check"></i></button>
+                </div>
+            </div>
+            <div class="product-bottom text-center">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <h3>Gloves</h3>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="product-top">
+                <img src="../public/assets/SanitizerWipes.png">
+                <div class="overlay">
+                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
+                            class="bi bi-cart-check"></i></button>
+                </div>
+            </div>
+            <div class="product-bottom text-center">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star-half-o"></i>
+                <h3>Sanitizer Wipes</h3>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="product-top">
+                <img src="../public/assets/HandSanitizer.png">
+                <div class="overlay">
+                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
+                            class="bi bi-cart-check"></i></button>
+                </div>
+            </div>
+            <div class="product-bottom text-center">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star-half-o"></i>
+                <h3>Hand Sanitizer</h3>
+            </div>
+        </div>
+
+         <div class="col-md-3">
+            <div class="product-top">
+                <img src="../public/assets/ToiletPaper.png">
+                <div class="overlay">
+                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
+                            class="bi bi-cart-check"></i></button>
+                </div>
+            </div>
+            <div class="product-bottom text-center">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <h3>Toilet Paper</h3>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

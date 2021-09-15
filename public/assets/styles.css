@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  margin-top: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+}
+
+.container h2 {
+  background: red;
+  color: #fff;
+  width: 200px;
+  font-size: 24px;
+  padding: 5px;
+  height: 40px;
+}
+
+.container h2 ::after {
+  content: '';
+  border-top: 40px solid red;
+  border-right: 40px solid transparent;
+  position: relative;
+  left: 48px;
+  top: 34px;
+}
+
+.row {
+  margin-top: 30px;
+}
+
+img {
+  width: 100%;
+}
+
+.product-bottom .bi {
+  color: yellow
+  /*Add Sizing for stars */
+}
+
+.product-bottom h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
