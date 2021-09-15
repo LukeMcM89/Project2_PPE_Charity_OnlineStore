@@ -17,7 +17,9 @@ const options = {
   },
 };
 
-https
+module.exports=  function (callback){
+
+ https
   .get(endpointUrl, options, (res) => {
     let body = [];
 
@@ -29,6 +31,7 @@ https
       try {
         let json = JSON.parse(body);
         console.log(json);
+        callback(json);
       } catch (error) {
         console.error(error.message);
       }
@@ -37,3 +40,5 @@ https
   .on("error", (error) => {
     console.error(error.message);
   });
+
+};
