@@ -10,6 +10,6 @@ const shopperData = [
     },  
 ];
 
-const seedShopper = () => Shopper.bulkcreate(shopperData);
+const seedShopper = () => Shopper.bulkCreate(shopperData);
 
 module.exports = seedShopper;
