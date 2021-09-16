@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +14,8 @@
 {{#each products as |product|}}
 <li>{{product.title}}</li>
 <p>{{product.description}}</p>
-{{/each}}
+<img src="../public/assets/""{{products.filename}}" alt=“{{products.description}}“>
+ {{/each}}
 <div class="container">
     <h2>PPE Products</h2>
     <div class="row">
