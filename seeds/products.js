@@ -4,7 +4,7 @@ const productsData = [
     {
         title: 'Face Mask',
         description: '100% spun bond polypropylene and double layered. PPE compliant.',
-        filename: 'public/assets/FaceMask.png',
+        filename: 'FaceMask.png',
     },
     {
         title: 'Face Shield',
