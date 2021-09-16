@@ -7,21 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="/public/assets/styles.css">
+  <link rel="stylesheet" href="/assets/styles.css">
   </head>
 
-<body>
-{{#each products as |product|}}
+{{!-- {{#each products as |product|}}
 <li>{{product.title}}</li>
 <p>{{product.description}}</p>
-<img src="../public/assets/""{{products.filename}}" alt=“{{products.description}}“>
- {{/each}}
+<img src="/assets/{{product.filename}}" alt="{{product.description}}">
+ {{/each}} --}}
+<body>
 <div class="container">
     <h2>PPE Products</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="product-top">
-                <img src="../public/assets/FaceMask.png">
+                <img src="/assets/FaceMask.png">
                 <div class="overlay">
                     <button type="button" class="btn btn-secondary" title="Add to Cart"><i
                             class="bi bi-cart-check"></i></button>
@@ -38,7 +38,7 @@
 
         <div class="col-md-3">
             <div class="product-top">
-                <img src="../public/assets/FaceShield.png">
+                <img src="/assets/FaceShield.png">
                 <div class="overlay">
                     <button type="button" class="btn btn-secondary" title="Add to Cart"><i
                             class="bi bi-cart-check"></i></button>
@@ -56,7 +56,7 @@
 
         <div class="col-md-3">
             <div class="product-top">
-                <img src="../public/assets/MedicalGloves.png">
+                <img src="/assets/MedicalGloves.png">
                 <div class="overlay">
                     <button type="button" class="btn btn-secondary" title="Add to Cart"><i
                             class="bi bi-cart-check"></i></button>
@@ -73,7 +73,7 @@
 
         <div class="col-md-3">
             <div class="product-top">
-                <img src="../public/assets/SanitizerWipes.png">
+                <img src="/assets/SanitizerWipes.png">
                 <div class="overlay">
                     <button type="button" class="btn btn-secondary" title="Add to Cart"><i
                             class="bi bi-cart-check"></i></button>
@@ -89,7 +89,7 @@
 
         <div class="col-md-3">
             <div class="product-top">
-                <img src="../public/assets/HandSanitizer.png">
+                <img src="/assets/HandSanitizer.png">
                 <div class="overlay">
                     <button type="button" class="btn btn-secondary" title="Add to Cart"><i
                             class="bi bi-cart-check"></i></button>
@@ -106,7 +106,7 @@
 
          <div class="col-md-3">
             <div class="product-top">
-                <img src="../public/assets/ToiletPaper.png">
+                <img src="/assets/ToiletPaper.png">
                 <div class="overlay">
                     <button type="button" class="btn btn-secondary" title="Add to Cart"><i
                             class="bi bi-cart-check"></i></button>
