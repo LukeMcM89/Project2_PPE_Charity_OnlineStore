@@ -1,9 +1,10 @@
 const router = require('express').Router();
-const { Products, Shopper } = require('../models');
+const { Products, Shopper, Project } = require('../models');
 const getData = require('../Covid-Latest-Totals');
 
 // GET all products for product page
 router.get('/products', async (req, res) => {
+  console.log("Blesst")
   try {
     const dbProductData = await Products.findAll();
     // const dbProductData = await Products.findAll({
@@ -14,20 +15,36 @@ router.get('/products', async (req, res) => {
     //     },
     //   ],
     // });
-
+    // save products as list
     const products = dbProductData.map((product) =>
       product.get({ plain: true })
     );
-    //Send over the 'products' session variable to the 'homepage' template
-    res.render('storefront', {
-      products,
-      loggedIn: req.session.loggedIn,
+    const projectData = await Project.findAll({
+      include: [
+        {
+          model: Shopper,
+          attributes: ['username'],
+        },
+      ],
     });
+        // Serialize data so the template can read it
+        const projects = projectData.map((project) => project.get({ plain: true }));
+    //Send over the 'products' session variable to the 'homepage' template
+    getData(([json]) => {
+      res.render('storefront', {
+        products,
+        projects,
+        json,
+        loggedIn: req.session.loggedIn,
+      });
+    });
+    
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
 
 // GET products --
 router.get('/products/:id', async (req, res) => {
@@ -54,7 +71,7 @@ router.get('/products/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-//LINE 32+ 58 have identical routes...
+
 
 // GET one product
 router.get('/products/:id', async (req, res) => {
@@ -79,7 +96,7 @@ router.get('/', (req, res) => {
   }
   // Otherwise, render the 'login' template
   getData(([json]) => {
-    res.render('login', json);
+    res.render('login', {json});
   });
 
 });
