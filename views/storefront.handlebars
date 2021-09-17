@@ -1,42 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/styles.css">
-  </head>
-
 {{!-- {{#each products as |product|}}
 <li>{{product.title}}</li>
 <p>{{product.description}}</p>
 <img src="/assets/{{product.filename}}" alt="{{product.description}}">
  {{/each}} --}}
-<body>
 <div class="container">
     <h2>PPE Products</h2>
     <div class="row">
         <div class="col-md-3">
             <div class="product-top">
-                <img src="/assets/FaceMask.png">
-                <div class="overlay">
+                {{!-- <img src="/assets/{{product.filename}}" alt="{{product.description}}">
+                {{!-- <div class="overlay">
                     <button type="button" class="btn btn-secondary" title="Add to Cart"><i
                             class="bi bi-cart-check"></i></button>
-                </div>
-            </div>
-            <div class="product-bottom text-center">
+                </div> --}}
+            </div> --}}
+            {{!-- <div class="product-bottom text-center"> --}}
+                {{#each products as |product|}}
+                <h1 class="productTitle">{{product.title}}</h1>
+                <p class="productDes">{{product.description}}</p>
+                <img class="productImg" src="/assets/{{product.filename}}" alt="{{product.description}}">
+                {{/each}}
+                {{!-- <i class="bi bi-star"></i>
                 <i class="bi bi-star"></i>
                 <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star-half-o"></i>
-                <h3>Disposable Face Mask</h3>
+                <i class="bi bi-star-half-o"></i> --}}
+                {{!-- <h3>Disposable Face Mask</h3> --}}
             </div>
         </div>
+    </div>
 
-        <div class="col-md-3">
+        {{!-- <div class="col-md-3">
             <div class="product-top">
                 <img src="/assets/FaceShield.png">
                 <div class="overlay">
@@ -120,9 +113,71 @@
                 <i class="bi bi-star"></i>
                 <h3>Toilet Paper</h3>
             </div>
-        </div>
+        </div> --}}
 
-    </div>
+    
+    <div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
 </div>
-</body>
-</html>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Project:</h3>
+
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label for="project-name">Organization name:</label>
+        <input class="form-input" type="text" id="project-name" name="project-name" />
+      </div>
+      <div class="form-group">
+        <label for="project-funding">Quantity requested:</label>
+        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+      </div>
+      <div class="form-group">
+        <label for="project-desc">Description of why PPE products are needed:</label>
+        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Request</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Requests:</h3>
+
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+</div>
+<script src="/js/profile.js"></script>
+
+{{!-- Project handlebars --}}
+{{!-- <div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{{get_emoji}}}</p>
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p>
+    <span for="img" aria-label="money">💲</span>
+    <span class="dollar-amount">{{format_amount needed_funding}}</span>
+    needed
+  </p>
+  <p>
+    <button class="btn btn-primary">Fund this Project!</button>
+  </p>
+</div> --}}
