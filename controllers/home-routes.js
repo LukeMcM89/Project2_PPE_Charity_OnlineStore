@@ -30,11 +30,15 @@ router.get('/products', async (req, res) => {
         // Serialize data so the template can read it
         const projects = projectData.map((project) => project.get({ plain: true }));
     //Send over the 'products' session variable to the 'homepage' template
-    res.render('storefront', {
-      products,
-      projects,
-      loggedIn: req.session.loggedIn,
+    getData(([json]) => {
+      res.render('storefront', {
+        products,
+        projects,
+        json,
+        loggedIn: req.session.loggedIn,
+      });
     });
+    
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -67,7 +71,7 @@ router.get('/products/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-//LINE 32+ 58 have identical routes...
+
 
 // GET one product
 router.get('/products/:id', async (req, res) => {
@@ -92,7 +96,7 @@ router.get('/', (req, res) => {
   }
   // Otherwise, render the 'login' template
   getData(([json]) => {
-    res.render('login', json);
+    res.render('login', {json});
   });
 
 });
