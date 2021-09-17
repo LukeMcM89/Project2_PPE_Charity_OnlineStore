@@ -1,9 +1,10 @@
 const router = require('express').Router();
-const { Products, Shopper } = require('../models');
+const { Products, Shopper, Project } = require('../models');
 const getData = require('../Covid-Latest-Totals');
 
 // GET all products for product page
 router.get('/products', async (req, res) => {
+  console.log("Blesst")
   try {
     const dbProductData = await Products.findAll();
     // const dbProductData = await Products.findAll({
@@ -14,13 +15,24 @@ router.get('/products', async (req, res) => {
     //     },
     //   ],
     // });
-
+    // save products as list
     const products = dbProductData.map((product) =>
       product.get({ plain: true })
     );
+    const projectData = await Project.findAll({
+      include: [
+        {
+          model: Shopper,
+          attributes: ['username'],
+        },
+      ],
+    });
+        // Serialize data so the template can read it
+        const projects = projectData.map((project) => project.get({ plain: true }));
     //Send over the 'products' session variable to the 'homepage' template
     res.render('storefront', {
       products,
+      projects,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -28,6 +40,7 @@ router.get('/products', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 // GET products --
 router.get('/products/:id', async (req, res) => {
