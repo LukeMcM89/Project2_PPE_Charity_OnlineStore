@@ -84,7 +84,8 @@ router.get('/project/:id', async (req, res) => {
       include: [
         {
           model: Shopper,
-          attributes: ['username'],
+          attributes: ['username','password'],
+          
         },
       ],
     });

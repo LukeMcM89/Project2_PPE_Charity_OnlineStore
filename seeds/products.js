@@ -8,27 +8,27 @@ const productsData = [
     },
     {
         title: 'Face Shield',
-        description: 'Medical grade, plastic and non-fogging. Lightweight and durable. Provides clear visability. PPE compliant',
+        description: 'Medical grade, plastic and non-fogging. Lightweight and durable. Provides clear visability. PPE compliant.',
         filename: 'FaceShield.png',
     },
     {
         title: 'Hand Sanitizer',
-        description: 'Kills 99% of germs. 8 fluid-ounces. Easy and conveninet to use. PPE compliant',
+        description: 'Kills 99% of germs. 8 fluid-ounces. Easy and conveninet to use. PPE compliant.',
         filename: 'HandSanitizer.png',
     },
     {
         title: 'Medical Gloves',
-        description: 'Disposable Nitrile gloves. Good chemical, oil and solvent resistance. Touch screen compatible. Size Medium. PPE compliant',
+        description: 'Disposable Nitrile gloves. Good chemical, oil and solvent resistance. Touch screen compatible. Size Medium. PPE compliant.',
         filename: 'MedicalGloves.png',
     },
     {
         title: 'Sanitizer Wipes',
-        description: 'Wet sanitizing wipes. Fragrence free. 75% alcohol and pure water formula. 80 count. PPE compliant',
+        description: 'Wet sanitizing wipes. Fragrance free. 75% alcohol and pure water formula. 80 count. PPE compliant.',
         filename: 'SanitizerWipes.png',
     },
     {
         title: 'Toilet Paper',
-        description: 'The best toilet paper on the planet Luke says.',
+        description: 'The best toilet paper on the planet, Luke says.',
         filename: 'ToiletPaper.png',
     },
 ];
