@@ -7,12 +7,13 @@
 
 
 .container h2 {
-  background: red;
-  color: rgb(5, 3, 3);
+  background: black;
+  color: white;
   width: 200px;
   font-size: 24px;
   padding: 5px;
-  height: 40px;
+  /* height: 40px; */
+  margin-right: 215px;
 }
 
 .h2, h2 {
@@ -81,7 +82,7 @@ color:white;
 
 h2 {
 
-  color:white;
+  color:black;
 }
 
 a {
@@ -99,11 +100,12 @@ a {
 p {
 
   color: red;
+  margin-left: 15px;
 }
 
 label {
 
-  color:white;
+  color:black;
 }
 
 

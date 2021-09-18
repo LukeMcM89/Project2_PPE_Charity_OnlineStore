@@ -34,7 +34,9 @@
         
 
     <footer>
-    <div class="row">
+    <div class="card">
+  
+  <div class="container">
   <div class="col-auto">
     <h2>Create a New Order</h2>
   </div>
@@ -62,15 +64,20 @@
       </div>
     </form>
   </div>
-  <div class="data">
+  
+  
+    <div class="data">
     
       <h2>COVID-19 Data:</h2>
       <p>Confirmed: {{json.confirmed}}</p>
       <p>Recovered: {{json.recovered}}</p>
       <p>Critical: {{json.critical}}</p>
       <p>Deaths: {{json.deaths}}</p>
-      
-    </div>
+</div>
+
+
+  
+  
   </footer>
 
   {{#if projects.length}}

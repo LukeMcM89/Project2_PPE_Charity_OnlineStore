@@ -1,31 +1,34 @@
-#wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  h4 {
-    line-height: 100%;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    font-size: 100pt;
-    text-align: center;
-    text-transform: uppercase;
-    text-rendering: optimizeLegibility;
-    display: block;
-    height: 100%;
-    width: 50%;
-    float: left;
-    padding-top: 100px;
-    background-color: #e7e5e4;
-  }
-  h4.artificial-light {
-    color: #131313;
-    letter-spacing: 0.15em;
-    text-shadow: 3px -6px 0px #3F3E3E, 2px -4px 0px #3F3E3E, 1px -2px 0px #3F3E3E, 0px 0px 0px #3F3E3E, -1px 2px #767676, -2px 4px #767676, -3px 6px #767676, -4px 8px #767676, -5px 10px #767676, -6px 12px 1px #767676, -7px 14px 1px #767676, -8px 16px 1px #767676, -9px 18px 1px #767676, -10px 20px 1px #767676, -11px 22px 1px #767676, -12px 24px 1px #767676, -13px 26px 1px #767676, -14px 28px 1px #767676, -15px 30px 1px #767676, -16px 32px 1px #767676, -17px 34px 1px #767676, -18px 36px 1px #767676, -19px 38px 1px #767676, -20px 40px 1px #767676;
-  }
-  h4.ambient-light {
-    background-color: #D1DADB;
-    width: 50%;
-    color: #131313;
-    letter-spacing: 0.15em;
-    text-shadow: 3px -6px 0px #3F3E3E, 2px -4px 0px #3F3E3E, 1px -2px 0px #3F3E3E, 0px 0px 0px #3F3E3E, -1px 2px 1px #788F9E, -2px 4px 1px #788F9E, -3px 6px 1px #788F9E, -4px 8px 1px #788F9E, -5px 10px 1px #788F9E, -6px 12px 1px #788F9E, -7px 14px 1px #788F9E, -8px 16px 1px #788F9E, -9px 18px 1px #788F9E, -10px 20px 1px #788F9E, -11px 22px 1px #788F9E, -12px 24px 1px #788F9E, -13px 26px 1px #788F9E, -14px 28px 1px #788F9E, -15px 30px 1px #788F9E, -16px 32px 1px #788F9E, -17px 34px 1px #788F9E, -18px 36px 1px #788F9E, -19px 38px 1px #788F9E, -20px 40px 1px #788F9E;
-  }
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.233);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: ;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 10px;
+  justify-content: center;
+  margin-left: 200px;
