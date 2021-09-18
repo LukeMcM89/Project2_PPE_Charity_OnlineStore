@@ -3,6 +3,7 @@ require("dotenv").config();
 
 var sequelize;
 if (process.env.IS_HEROKU == "false") {
+  console.log("Local");
   sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
@@ -14,6 +15,7 @@ if (process.env.IS_HEROKU == "false") {
     }
   );
 } else {
+  console.log("Non-Local");
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 }
 

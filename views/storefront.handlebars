@@ -1,119 +1,21 @@
-{{!-- {{#each products as |product|}}
-<li>{{product.title}}</li>
-<p>{{product.description}}</p>
-<img src="/assets/{{product.filename}}" alt="{{product.description}}">
- {{/each}} --}}
+
+ 
 <div class="container">
     <h2>PPE Products</h2>
+    {{#each products as |product|}}
     <div class="row">
         <div class="col-md-3">
             <div class="product-top">
-                {{!-- <img src="/assets/{{product.filename}}" alt="{{product.description}}">
-                {{!-- <div class="overlay">
-                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
-                            class="bi bi-cart-check"></i></button>
-                </div> --}}
-            </div> --}}
-            {{!-- <div class="product-bottom text-center"> --}}
-                {{#each products as |product|}}
+                
                 <h1 class="productTitle">{{product.title}}</h1>
                 <p class="productDes">{{product.description}}</p>
                 <img class="productImg" src="/assets/{{product.filename}}" alt="{{product.description}}">
-                {{/each}}
-                {{!-- <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star-half-o"></i> --}}
-                {{!-- <h3>Disposable Face Mask</h3> --}}
+               
             </div>
         </div>
     </div>
-
-        {{!-- <div class="col-md-3">
-            <div class="product-top">
-                <img src="/assets/FaceShield.png">
-                <div class="overlay">
-                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
-                            class="bi bi-cart-check"></i></button>
-                </div>
-            </div>
-
-            <div class="product-bottom text-center">
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <h3>Face Shield</h3>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="product-top">
-                <img src="/assets/MedicalGloves.png">
-                <div class="overlay">
-                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
-                            class="bi bi-cart-check"></i></button>
-                </div>
-            </div>
-            <div class="product-bottom text-center">
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <h3>Gloves</h3>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="product-top">
-                <img src="/assets/SanitizerWipes.png">
-                <div class="overlay">
-                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
-                            class="bi bi-cart-check"></i></button>
-                </div>
-            </div>
-            <div class="product-bottom text-center">
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star-half-o"></i>
-                <h3>Sanitizer Wipes</h3>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="product-top">
-                <img src="/assets/HandSanitizer.png">
-                <div class="overlay">
-                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
-                            class="bi bi-cart-check"></i></button>
-                </div>
-            </div>
-            <div class="product-bottom text-center">
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star-half-o"></i>
-                <h3>Hand Sanitizer</h3>
-            </div>
-        </div>
-
-         <div class="col-md-3">
-            <div class="product-top">
-                <img src="/assets/ToiletPaper.png">
-                <div class="overlay">
-                    <button type="button" class="btn btn-secondary" title="Add to Cart"><i
-                            class="bi bi-cart-check"></i></button>
-                </div>
-            </div>
-            <div class="product-bottom text-center">
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <h3>Toilet Paper</h3>
-            </div>
-        </div> --}}
+ {{/each}}
+        
 
     
     <div class="row">
@@ -167,18 +69,4 @@
 </div>
 <script src="/js/profile.js"></script>
 
-{{!-- Project handlebars --}}
-{{!-- <div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div> --}}
+
