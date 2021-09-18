@@ -506,7 +506,7 @@ button, select {
 
 
 h4 {
-  font-size: 70px;
+  font-size: 20px;
   -webkit-text-fill-color: whitesmoke; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: darkgrey;
