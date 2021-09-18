@@ -19,10 +19,11 @@ router.delete('/:id', withAuth, async (req, res) => {
   try {
     const projectData = await Project.destroy({
       where: {
-        id: req.params.id,
+        id: +req.params.id,
         shopper_id: req.session.shopper_id,
       },
     });
+    
 
     if (!projectData) {
       res.status(404).json({ message: 'No project found with this id!' });
