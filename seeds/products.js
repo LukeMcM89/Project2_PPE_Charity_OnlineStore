@@ -13,7 +13,7 @@ const productsData = [
     },
     {
         title: 'Hand Sanitizer',
-        description: 'Kills 99% of germs. 8 fluid-ounces. Easy and conveninet to use. PPE compliant.',
+        description: 'Kills 99% of germs. 8 fluid-ounces. Easy and convenient to use. PPE compliant.',
         filename: 'HandSanitizer.png',
     },
     {
