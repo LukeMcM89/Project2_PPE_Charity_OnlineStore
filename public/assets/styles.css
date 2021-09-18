@@ -18,7 +18,9 @@
 .h2, h2 {
   font-size: 2rem;
   justify-content: center;
-  margin-left: 78px; }
+  margin-left: ; }
+
+
 
 .container h2 ::after {
   content: '';
