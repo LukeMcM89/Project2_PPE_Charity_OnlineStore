@@ -167,6 +167,7 @@ img {
 .gallery figure img {
   width: 75%;
   transition: all 0.3s ease-in-out;
+  border-radius: 9px;
 }
 .gallery figure figcaption {
   display: none;
