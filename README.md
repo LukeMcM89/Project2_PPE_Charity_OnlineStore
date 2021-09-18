@@ -10,36 +10,57 @@ They are:
 
 Wesley Burns
 
-Wesley's GitHub: https://github.com/burnsw5
+Wesley's [GitHub](https://github.com/burnsw5)
 
 
 Benjamin Benitez
 
-Ben's GitHub: https://github.com/BenjaminBenitez92
+Ben's [GitHub](https://github.com/BenjaminBenitez92)
 
 
 Alex Palmer
 
-Alex's GitHub: https://github.com/apalmer37
+Alex's [GitHub](https://github.com/apalmer37)
 
 
 Luke McMurtrie
 
-Luke's GitHub: https://github.com/LukeMcM89
+Luke's [GitHub](https://github.com/LukeMcM89)
 
 ## PowerPoint Presentation
 
-https://docs.google.com/presentation/d/1BH0x0s606Jzt2ZetRN0ziNWrEau6ByNxZ6cdBrqLSXM/edit?usp=sharing
+[GoogleDrive Presentation](https://docs.google.com/presentation/d/1BH0x0s606Jzt2ZetRN0ziNWrEau6ByNxZ6cdBrqLSXM/edit?usp=sharing)
 
 ## Project Repository
 
-https://github.com/apalmer37/Project2_PPE_Charity_OnlineStore
+[Project 2 Repository](https://github.com/apalmer37/Project2_PPE_Charity_OnlineStore)
 
 ## Technologies Utilized
 
-Express, Express-Handlebars, Express-Session, Sequelize, Bcrypt, dotENV (.env), Bootstrap, HTTPS 
+* Node.js    
+* Express.js
+* Express-Handlebars 
+* Express-Session
+* Sequelize 
+* Bcrypt 
+* dotENV (.env)
+* Bootstrap
+* HTTPS 
 
-Covid-19 data API
+* [Covid-19 Data API](https://rapidapi.com/Gramzivi/api/covid-19-data/)
 
-https://rapidapi.com/Gramzivi/api/covid-19-data/
 
+
+## Installations
+
+To install Node.js, click [here](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
+
+To install MySQL, reference the installation documentation [here](https://dev.mysql.com/downloads/installer/).
+
+To install the necessary dependencies, run the following command:
+
+npm i
+
+## License
+
+This project is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT)
