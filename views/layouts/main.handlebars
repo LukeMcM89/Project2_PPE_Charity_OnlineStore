@@ -14,23 +14,9 @@
 </head>
 
 <body>
-  <main>
+  
   <header>
     <h1>COVID-19 PPE Charity Store</h1>
-  </header>
-
-
-  
-    <a href="/">Home</a>
-    <!-- If the user is logged in, show a logout button -->
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <!-- Otherwise, show a link to login -->
-    <a href="/">Login</a>
-    {{/if}}
-    {{{body}}}
-  
     <div class="gallery">
     
       <h2>COVID-19 Data:</h2>
@@ -40,6 +26,22 @@
       <p>Deaths: {{json.deaths}}</p>
       
     </div>
+    <a href="/">Home</a>
+    <!-- If the user is logged in, show a logout button -->
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <!-- Otherwise, show a link to login -->
+    <a href="/">Login</a>
+    {{/if}}
+   
+  </header>
+  <main>
+ {{{body}}}
+  
+    
+  
+    
   </main>
   <!-- If the user is logged in, load the JS script for when they logout -->
   {{#if loggedIn}}
