@@ -9,6 +9,8 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/styles.css">
     <link rel="stylesheet" href="/assets/Storefront.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+	
 
   <title>COVID-19 PPE Charity Store</title>
 
@@ -16,17 +18,16 @@
 
 <body>
   
-  <header>
-    <h1>COVID-19 PPE Charity Store</h1>
+ 
     
     
-    <a href="/">Home</a>
+    <a href="/" class="btn btn-outline-primary btn-lg">Home</a>
     <!-- If the user is logged in, show a logout button -->
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <button id="logout" class="btn btn-outline-danger btn-lg">Logout</button>
     {{else}}
     <!-- Otherwise, show a link to login -->
-    <a href="/">Login</a>
+    <a href="/" class="btn btn-outline-primary btn-lg">Login</a>
     {{/if}}
    
   </header>

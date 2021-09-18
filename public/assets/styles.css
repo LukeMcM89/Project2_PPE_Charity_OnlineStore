@@ -15,6 +15,11 @@
   height: 40px;
 }
 
+.h2, h2 {
+  font-size: 2rem;
+  justify-content: center;
+  margin-left: 78px; }
+
 .container h2 ::after {
   content: '';
   border-top: 40px solid red;
@@ -22,6 +27,14 @@
   position: relative;
   left: 48px;
   top: 34px;
+}
+
+.btn-outline-primary {
+  color: #007bff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #007bff;
+  margin: 30px;
 }
 
 .row {
@@ -476,3 +489,24 @@ img {
   margin-left: 200px;
   color:white;
 }
+
+button, select {
+  text-transform: none;
+ 
+}
+
+
+
+
+
+
+
+h4 {
+  font-size: 70px;
+  -webkit-text-fill-color: whitesmoke; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: darkgrey;
+  text-transform: uppercase;
+  line-height: 80%;
+}
+
