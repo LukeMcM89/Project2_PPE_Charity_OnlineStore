@@ -35,6 +35,10 @@ Luke's [GitHub](https://github.com/LukeMcM89)
 
 [Project 2 Repository](https://github.com/apalmer37/Project2_PPE_Charity_OnlineStore)
 
+## Heroku Deployment
+
+[Project](https://charity-store.herokuapp.com/)
+
 ## Technologies Utilized
 
 * Node.js    
