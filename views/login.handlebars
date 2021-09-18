@@ -3,42 +3,50 @@
 <p>Critical: {{critical}}</p>
 <p>Deaths: {{deaths}}</p> --}}
 
-<div class="row justify-space-between-md">
-  <div class="login-card">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
+
+
+
+
+
+<form class="form login-form">
+    <div class="form-group">
+      <h2 class="page-title">Login</h2>
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email"  class="form-control" id="email-login" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="password-login" placeholder="Password">
+    </div>
+    
+    </div>
+    <button type="login" class="btn btn-primary">Submit</button>
+  </form>
+
+  <form class="form signup-form">
+    <div class="form-group">
+      <h2 class="page-title">Signup</h2>
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email"  class="form-control" id="email-signup" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="username-signup" placeholder="Password">
       </div>
-      <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="login-card">
-    <h2 class="page-title">Signup</h2>
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="username-signup">Username:</label>
-        <input class="form-input" type="text" id="username-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Enter Password Again</label>
+      <input type="password" class="form-control" id="password-signup" placeholder="Password">
+    </div>
+    
+     
+     
+   
+    <button type="login" class="btn btn-primary">Submit</button>
+  </form>
+
+
   </div>
 </div>
 
