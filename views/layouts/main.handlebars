@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="/public/assets/styles.css">
+  <link rel="stylesheet" href="/assets/styles.css">
 
   <title>COVID-19 PPE Charity Store</title>
 
@@ -19,6 +19,8 @@
     <h1>COVID-19 PPE Charity Store</h1>
   </header>
 
+
+  
     <a href="/">Home</a>
     <!-- If the user is logged in, show a logout button -->
     {{#if loggedIn}}
@@ -27,6 +29,7 @@
     <!-- Otherwise, show a link to login -->
     <a href="/">Login</a>
     {{/if}}
+    {{{body}}}
   
     <div class="gallery">
     
@@ -35,7 +38,7 @@
       <p>Recovered: {{json.recovered}}</p>
       <p>Critical: {{json.critical}}</p>
       <p>Deaths: {{json.deaths}}</p>
-      {{{body}}}
+      
     </div>
   </main>
   <!-- If the user is logged in, load the JS script for when they logout -->

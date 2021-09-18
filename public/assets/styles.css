@@ -4,9 +4,11 @@
   letter-spacing: 1px;
 }
 
+
+
 .container h2 {
   background: red;
-  color: #fff;
+  color: rgb(5, 3, 3);
   width: 200px;
   font-size: 24px;
   padding: 5px;
@@ -24,7 +26,10 @@
 
 .row {
   margin-top: 30px;
+  margin-left: 20%;
 }
+  
+
 
 img {
   width: 100%;
@@ -39,3 +44,85 @@ img {
   font-size: 20px;
   font-weight: bold;
 }
+
+.gallery {
+  margin-top: -221px;
+  margin-left: 76%;
+  color: black;
+  background-color: grey;
+  border-radius: 10px;
+  
+}
+
+h1 {
+
+  display: flex;
+  justify-content: center;
+
+
+}
+
+a {
+
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  justify-content: center;
+  
+  display: flex;
+
+
+}
+
+p {
+
+  color: red;
+}
+
+body {
+  background-image: url("./COVID-19_header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  
+}
+
+.form-control {
+  display: block;
+  width: 259px;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form {
+
+
+    
+    content: '';
+    height: 100%;
+    left: 0;
+   padding:20px;
+    top: 0;
+    width: 100%;
+   
+    z-index: -1;
+    border-radius: 6px;
+    
+
+}
+
+main {
+
+
+ 
+}
+
+
+
