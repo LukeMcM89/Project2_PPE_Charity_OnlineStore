@@ -1,23 +1,39 @@
 
  
-<div class="container">
-    <h2>PPE Products</h2>
-    {{#each products as |product|}}
-    <div class="row">
-        <div class="col-md-3">
-            <div class="product-top">
-                
-                <h1 class="productTitle">{{product.title}}</h1>
-                <p class="productDes">{{product.description}}</p>
-                <img class="productImg" src="/assets/{{product.filename}}" alt="{{product.description}}">
-               
-            </div>
-        </div>
-    </div>
- {{/each}}
+<div class="gallery">
+  <figure>
+    <h3>Facemask</h3>
+    <img src="/assets/FaceMask.png" alt="" />
+    <h3>100% spun bond polypropylene and double layered.</h3>
+  </figure>
+  <figure>
+    <h3>Face Shield</h3>
+    <img src="/assets/FaceShield.png" alt="" />
+    <h3>Medical grade, plastic and non-fogging. Lightweight and durable. Provides clear visability.</h3>
+  </figure>
+  <figure>
+    <h3>Hand Sanitizer</h3>
+    <img src="/assets/HandSanitizer.png" alt="" />
+    <h3>Kills 99% of germs. 8 fluid-ounces. Easy and convenient to use.</h3>
+  </figure>
+  <figure>
+    <h3>Medical Gloves</h3>
+    <img src="/assets/MedicalGloves.png" alt="" />
+     <h1>Disposable Nitrile gloves. Good chemical, oil and solvent resistance. Touch screen compatible. Size Medium.</h1>
+  </figure>
+  <figure>
+    <h3>Sanitizer Wipes</h3>
+    <img src="/assets/SanitizerWipes.png" alt="" />
+     <h1>Wet sanitizing wipes. Fragrance free. 75% alcohol and pure water formula. 80 count.</h1>
+  </figure>
+  <figure>
+    <h3>Toilet Paper</h3>
+    <img src="/assets/ToiletPaper.png" alt="" />
+     <h1>The best toilet paper on the planet, Luke says.</h1>
+  </figure>
         
 
-    
+    <footer>
     <div class="row">
   <div class="col-auto">
     <h2>Create a New Order</h2>
@@ -46,6 +62,16 @@
       </div>
     </form>
   </div>
+  <div class="data">
+    
+      <h2>COVID-19 Data:</h2>
+      <p>Confirmed: {{json.confirmed}}</p>
+      <p>Recovered: {{json.recovered}}</p>
+      <p>Critical: {{json.critical}}</p>
+      <p>Deaths: {{json.deaths}}</p>
+      
+    </div>
+  </footer>
 
   {{#if projects.length}}
   <div class="col-md-6 project-list">
