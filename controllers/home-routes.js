@@ -4,18 +4,9 @@ const getData = require('../Covid-Latest-Totals');
 
 // GET all products for product page
 router.get('/products', async (req, res) => {
-  console.log("Blesst")
   try {
     const dbProductData = await Products.findAll();
-    // const dbProductData = await Products.findAll({
-    //   include: [
-    //     {
-    //       model: Products,
-    //       attributes: ['filename', 'title', 'description'],
-    //     },
-    //   ],
-    // });
-    // save products as list
+
     const products = dbProductData.map((product) =>
       product.get({ plain: true })
     );
@@ -83,6 +74,29 @@ router.get('/products/:id', async (req, res) => {
     res.render('products', { products, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/project/:id', async (req, res) => {
+  try {
+    const projectData = await Project.findByPk(req.params.id, {
+      include: [
+        {
+          model: Shopper,
+          attributes: ['username'],
+        },
+      ],
+    });
+    console.log(projectData);
+
+    const project = projectData.get({ plain: true });
+    console.log(project);
+    res.render('project', {
+      project,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
     res.status(500).json(err);
   }
 });

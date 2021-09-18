@@ -31,7 +31,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/products');
       } else {
         alert('Failed to delete project');
       }
